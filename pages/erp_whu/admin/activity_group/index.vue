@@ -17,7 +17,7 @@
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <nuxt-link
-                  :to="{ name: 'admin-activity_group-create' }"
+                  :to="{ name: 'erp_whu-admin-activity_group-create' }"
                   class="btn btn-info btn-sm"
                   style="padding-top: 8px"
                   title="Tambah"
@@ -60,7 +60,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-activity_group-edit-id',
+                  name: 'erp_whu-admin-activity_group-edit-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"
@@ -247,8 +247,6 @@ export default {
       })
     },
   },
-
- 
 }
 </script>
 

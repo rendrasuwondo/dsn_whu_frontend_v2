@@ -17,7 +17,7 @@
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <nuxt-link
-                  :to="{ name: 'admin-employee-create' }"
+                  :to="{ name: 'erp_whu-admin-employee-create' }"
                   class="btn btn-info btn-sm"
                   style="padding-top: 8px"
                   title="Tambah"
@@ -60,7 +60,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-employee-edit-id',
+                  name: 'erp_whu-admin-employee-edit-id',
                   params: { id: row.item.id },
                   query: { q: param_q, afdeling_id: row.item.afdeling_id },
                 }"
@@ -81,7 +81,7 @@
             <template v-slot:cell(employee_afdeling)="row">
               <b-button
                 :to="{
-                  name: 'admin-employee_afdeling-id',
+                  name: 'erp_whu-admin-employee_afdeling-id',
                   params: {
                     id: row.item.id,
                   },
@@ -96,7 +96,7 @@
             <template v-slot:cell(employee_department)="row">
               <b-button
                 :to="{
-                  name: 'admin-employee_department-id',
+                  name: 'erp_whu-admin-employee_department-id',
                   params: {
                     id: row.item.id,
                   },
@@ -111,7 +111,7 @@
             <template v-slot:cell(employee_position)="row">
               <b-button
                 :to="{
-                  name: 'admin-employee_position-id',
+                  name: 'erp_whu-admin-employee_position-id',
                   params: {
                     id: row.item.id,
                   },
@@ -126,7 +126,7 @@
             <template v-slot:cell(employee_activity_group)="row">
               <b-button
                 :to="{
-                  name: 'admin-employee_activity_group-id',
+                  name: 'erp_whu-admin-employee_activity_group-id',
                   params: {
                     id: row.item.id,
                   },

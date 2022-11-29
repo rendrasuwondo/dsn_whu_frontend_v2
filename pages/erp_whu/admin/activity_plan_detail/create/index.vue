@@ -10,9 +10,7 @@
           <h3 class="card-title">
             <i class="nav-icon fas fa-book-open"></i> TAMBAH RKH Detail
           </h3>
-          <div class="card-tools">
-           
-          </div>
+          <div class="card-tools"></div>
         </div>
         <div class="card-body">
           <form @submit.prevent="storePost">
@@ -254,7 +252,12 @@ export default {
 
       this.value = this.field.activitied_at
 
-      formData.append('id', this.field.activity_id ? this.field.activity_id.id : '' + this.field.afdeling_id +this.field.activitied_at)
+      formData.append(
+        'id',
+        this.field.activity_id
+          ? this.field.activity_id.id
+          : '' + this.field.afdeling_id + this.field.activitied_at
+      )
       formData.append('afdeling_id', this.field.afdeling_id)
       formData.append(
         'activity_id',
@@ -265,16 +268,20 @@ export default {
       formData.append('qty', this.field.qty)
       formData.append('flexrate', 0)
       formData.append('description', this.field.description)
-      formData.append('created_by', this.$auth.user.employee.nik + '-' + this.$auth.user.employee.name)
-      formData.append('updated_by', this.$auth.user.employee.nik + '-' + this.$auth.user.employee.name)
-        
+      formData.append(
+        'created_by',
+        this.$auth.user.employee.nik + '-' + this.$auth.user.employee.name
+      )
+      formData.append(
+        'updated_by',
+        this.$auth.user.employee.nik + '-' + this.$auth.user.employee.name
+      )
+
       Promise.all([
-          await this.$axios
-          .post('/api/admin/activity_plan', formData),
-          await this.$axios
-          .post('/api/admin/activity_actual', formData)
+        await this.$axios.post('/api/admin/activity_plan', formData),
+        await this.$axios.post('/api/admin/activity_actual', formData),
       ])
-      .then(() => {
+        .then(() => {
           //sweet alert
           this.$swal.fire({
             title: 'BERHASIL!',
@@ -286,36 +293,37 @@ export default {
 
           //redirect, if success store data
           this.$router.push({
-            name: 'admin-activity_plan',
+            name: 'erp_whu-admin-activity_plan',
           })
         })
-        .catch((error) => {
-          //assign error to state "validation"
-          this.validation = error.response.data
-        }
+        .catch(
+          (error) => {
+            //assign error to state "validation"
+            this.validation = error.response.data
+          }
 
-      //sending data to server
-      // await this.$axios
-      //   .post('/api/admin/activity_plan', formData)
-      //   .then(() => {
-      //     //sweet alert
-      //     this.$swal.fire({
-      //       title: 'BERHASIL!',
-      //       text: 'Data Berhasil Disimpan!',
-      //       icon: 'success',
-      //       showConfirmButton: false,
-      //       timer: 2000,
-      //     })
+          //sending data to server
+          // await this.$axios
+          //   .post('/api/admin/activity_plan', formData)
+          //   .then(() => {
+          //     //sweet alert
+          //     this.$swal.fire({
+          //       title: 'BERHASIL!',
+          //       text: 'Data Berhasil Disimpan!',
+          //       icon: 'success',
+          //       showConfirmButton: false,
+          //       timer: 2000,
+          //     })
 
-      //     //redirect, if success store data
-      //     this.$router.push({
-      //       name: 'admin-activity_plan',
-      //     })
-      //   })
-      //   .catch((error) => {
-      //     //assign error to state "validation"
-      //     this.validation = error.response.data
-      //   }
+          //     //redirect, if success store data
+          //     this.$router.push({
+          //       name: 'erp_whu-admin-activity_plan',
+          //     })
+          //   })
+          //   .catch((error) => {
+          //     //assign error to state "validation"
+          //     this.validation = error.response.data
+          //   }
         )
     },
   },

@@ -207,7 +207,7 @@ export default {
 
     back() {
       this.$router.push({
-        name: 'system-menu_has_role_2-id',
+        name: 'erp_whu-system-menu_has_role_2-id',
         params: { id: this.$route.params.id, r: 1 },
         query: {
           menu_id: this.$route.query.menu_id,

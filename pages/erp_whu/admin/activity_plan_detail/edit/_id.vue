@@ -178,7 +178,6 @@ export default {
       show_hk: true,
       show_rate: false,
       value: undefined,
-     
 
       field: {
         ha_statement_id: '',
@@ -242,7 +241,7 @@ export default {
           )
 
           .then((response) => {
-              this.field.block_lov=response.data.data[0].block_lov
+            this.field.block_lov = response.data.data[0].block_lov
             console.log(response.data.data[0].block_lov)
           })
       })
@@ -333,7 +332,7 @@ export default {
   methods: {
     back() {
       this.$router.push({
-        name: 'admin-activity_plan_detail-id',
+        name: 'erp_whu-admin-activity_plan_detail-id',
         params: { id: this.$route.params.id, r: 1 },
       })
     },

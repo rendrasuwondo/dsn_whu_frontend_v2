@@ -241,7 +241,7 @@ export default {
 
     back() {
       this.$router.push({
-        name: 'admin-location-id',
+        name: 'erp_whu-admin-location-id',
         params: { id: this.field.site_id, r: 1 },
       })
     },

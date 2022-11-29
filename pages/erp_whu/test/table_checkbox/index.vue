@@ -17,7 +17,7 @@
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <nuxt-link
-                  :to="{ name: 'admin-company-create' }"
+                  :to="{ name: 'erp_whu-admin-company-create' }"
                   class="btn btn-info btn-sm"
                   style="padding-top: 8px"
                   title="Tambah"
@@ -57,11 +57,10 @@
             :fields="fields"
             show-empty
           >
-
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-company-edit-id',
+                  name: 'erp_whu-admin-company-edit-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"
@@ -98,15 +97,17 @@
         :items="tableData"
         :fields="tableColumns"
       >
-    <template v-slot:head(selected)="data">
-        <!-- <span>{{ data.label.toUpperCase() }}</span> -->
-        <span><b-form-checkbox
-            @click.native.stop
-            @change="select"
-            v-model="allSelected"
-          >
-          </b-form-checkbox></span>
-      </template>
+        <template v-slot:head(selected)="data">
+          <!-- <span>{{ data.label.toUpperCase() }}</span> -->
+          <span
+            ><b-form-checkbox
+              @click.native.stop
+              @change="select"
+              v-model="allSelected"
+            >
+            </b-form-checkbox
+          ></span>
+        </template>
         <template v-slot:custom-foot="data">
           <b-form-checkbox
             @click.native.stop
@@ -238,7 +239,7 @@ export default {
       /* this.selectedData = this.tableData.map(function (el) {
         return el.selected == true
       }); */
-      this.selectedData = [];
+      this.selectedData = []
       this.tableData.forEach((el) => {
         if (el.selected == true) {
           this.selectedData.push(el)
@@ -246,11 +247,11 @@ export default {
       })
       console.log(this.selectedData)
 
-      this.selectedData.forEach(element => {
-          alert(element.selected)
-      });
+      this.selectedData.forEach((element) => {
+        alert(element.selected)
+      })
 
-        alert(this.selectedData.length)
+      alert(this.selectedData.length)
       /*     this.tableData.forEach(el => {
             el.selected = this.allSelected 
         });

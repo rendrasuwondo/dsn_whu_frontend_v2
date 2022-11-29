@@ -17,7 +17,7 @@
             <div class="input-group mb-3">
               <!-- <div class="input-group-prepend">
                 <nuxt-link
-                  :to="{ name: 'admin-employee-create' }"
+                  :to="{ name: 'erp_whu-admin-employee-create' }"
                   class="btn btn-info btn-sm"
                   style="padding-top: 8px"
                   ><i class="fa fa-plus-circle"></i> TAMBAH</nuxt-link
@@ -52,7 +52,7 @@
             <!-- <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-employee-edit-id',
+                  name: 'erp_whu-admin-employee-edit-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"
@@ -131,14 +131,14 @@ export default {
 
     //fetching posts
     const posts = await $axios.$get(
-     `/api/admin/master/activity_plan/1120_SW22C_2022-03-18?q=${search}&page=${page}`
+      `/api/admin/master/activity_plan/1120_SW22C_2022-03-18?q=${search}&page=${page}`
     )
 
-  //   return {
-  //     posts: posts.data.data.data,
-  //     pagination: posts.data,
-  //     search: search,
-  //   }
+    //   return {
+    //     posts: posts.data.data.data,
+    //     pagination: posts.data,
+    //     search: search,
+    //   }
   },
 
   methods: {

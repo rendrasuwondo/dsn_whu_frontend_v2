@@ -13,7 +13,7 @@
                 <td>
                   <nuxt-link
                     :to="{
-                      name: 'system-menu',
+                      name: 'erp_whu-system-menu',
                     }"
                     class="nav-link"
                   >
@@ -43,7 +43,7 @@
               <div class="input-group-prepend">
                 <nuxt-link
                   :to="{
-                    name: 'system-sub_menu-create-id',
+                    name: 'erp_whu-system-sub_menu-create-id',
                     params: { id: parent_id, r: 1 },
                   }"
                   class="btn btn-info btn-sm"
@@ -93,7 +93,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'system-sub_menu-edit-id',
+                  name: 'erp_whu-system-sub_menu-edit-id',
                   params: { id: row.item.id, r: 1 },
                 }"
                 variant="link"
@@ -115,7 +115,7 @@
             <template v-slot:cell(role)="row">
               <b-button
                 :to="{
-                  name: 'system-menu_has_role_2-id',
+                  name: 'erp_whu-system-menu_has_role_2-id',
                   params: { id: row.item.id },
                   query: {
                     menu_id: row.item.parent_id,

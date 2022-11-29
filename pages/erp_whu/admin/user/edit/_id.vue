@@ -61,8 +61,6 @@
               </div>
             </div>
 
-            
-
             <div class="form-group">
               <label>ALAMAT EMAIL</label>
               <input
@@ -90,9 +88,17 @@
 
             <div class="form-group">
               <label>NPK</label>
-              <multiselect v-model="user.employee_id" :options="employees" label="name" track-by="id" :searchable="true"></multiselect>
+              <multiselect
+                v-model="user.employee_id"
+                :options="employees"
+                label="name"
+                track-by="id"
+                :searchable="true"
+              ></multiselect>
               <div v-if="validation.employee_id" class="mt-2">
-                <b-alert show variant="danger">{{ validation.employee_id[0] }}</b-alert>
+                <b-alert show variant="danger">{{
+                  validation.employee_id[0]
+                }}</b-alert>
               </div>
             </div>
 
@@ -117,8 +123,7 @@ export default {
   //meta
   head() {
     return {
-      title:
-        'Edit User - ERP WHU',
+      title: 'Edit User - ERP WHU',
     }
   },
 
@@ -155,15 +160,14 @@ export default {
         this.user.email = response.data.data.email
       })
 
-      //fetching data employee
-      this.$axios.get('/api/admin/employee')
+    //fetching data employee
+    this.$axios
+      .get('/api/admin/employee')
 
-        .then(response => {
-
-          //assing response data to state "employee"
-          this.employees = response.data.data.data
-        })
-
+      .then((response) => {
+        //assing response data to state "employee"
+        this.employees = response.data.data.data
+      })
   },
 
   methods: {
@@ -190,7 +194,7 @@ export default {
 
           //redirect, if success store data
           this.$router.push({
-            name: 'admin-user',
+            name: 'erp_whu-admin-user',
           })
         })
         .catch((error) => {

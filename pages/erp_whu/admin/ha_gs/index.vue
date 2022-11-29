@@ -41,7 +41,7 @@
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <nuxt-link
-                  :to="{ name: 'admin-ha_gs-create' }"
+                  :to="{ name: 'erp_whu-admin-ha_gs-create' }"
                   class="btn btn-info btn-sm"
                   style="
                     padding-top: 8px;
@@ -89,7 +89,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-ha_gs-edit-id',
+                  name: 'erp_whu-admin-ha_gs-edit-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"

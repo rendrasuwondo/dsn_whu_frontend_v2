@@ -11,7 +11,10 @@
             <table>
               <tr>
                 <td>
-                  <nuxt-link :to="{ name: 'system-role' }" class="nav-link">
+                  <nuxt-link
+                    :to="{ name: 'erp_whu-system-role' }"
+                    class="nav-link"
+                  >
                     <i class="nav-icon fas fa-book-open"></i>
                     Role
                   </nuxt-link>
@@ -38,7 +41,7 @@
               <div class="input-group-prepend">
                 <nuxt-link
                   :to="{
-                    name: 'system-user_has_role-create-id',
+                    name: 'erp_whu-system-user_has_role-create-id',
                     params: { id: role_id, r: 1 },
                   }"
                   class="btn btn-info btn-sm"
@@ -88,7 +91,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'system-user_has_role-edit-id',
+                  name: 'erp_whu-system-user_has_role-edit-id',
                   params: { id: row.item.id, r: 1 },
                 }"
                 variant="link"
@@ -109,7 +112,7 @@
             <template v-slot:cell(detail)="row">
               <b-button
                 :to="{
-                  name: 'system-user_has_role',
+                  name: 'erp_whu-system-user_has_role',
                   params: { id: row.item.id },
                 }"
                 variant=""

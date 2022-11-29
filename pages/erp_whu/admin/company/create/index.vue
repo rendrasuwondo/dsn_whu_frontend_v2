@@ -214,7 +214,7 @@ export default {
   methods: {
     back() {
       this.$router.push({
-        name: 'admin-company',
+        name: 'erp_whu-admin-company',
         params: { id: this.$route.params.id, r: 1 },
       })
     },

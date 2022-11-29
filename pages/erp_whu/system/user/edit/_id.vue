@@ -228,7 +228,7 @@ export default {
   methods: {
     back() {
       this.$router.push({
-        name: 'system-user',
+        name: 'erp_whu-system-user',
         params: { id: this.$route.params.id, r: 1 },
       })
     },
@@ -262,7 +262,7 @@ export default {
           })
           //redirect ke route "post"
           this.$router.push({
-            name: 'system-user',
+            name: 'erp_whu-system-user',
           })
         })
         .catch((error) => {

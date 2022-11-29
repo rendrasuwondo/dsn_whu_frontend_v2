@@ -267,7 +267,7 @@ export default {
 
           //redirect, if success store data
           this.$router.push({
-            name: 'admin-post',
+            name: 'erp_whu-admin-post',
           })
         })
         .catch((error) => {

@@ -377,7 +377,7 @@ export default {
   methods: {
     back() {
       this.$router.push({
-        name: 'admin-approved_realisasi',
+        name: 'erp_whu-admin-approved_realisasi',
         params: { id: this.$route.params.id, r: 1 },
         query: {
           activitied_at_prepend: this.$route.query.activitied_at_prepend,

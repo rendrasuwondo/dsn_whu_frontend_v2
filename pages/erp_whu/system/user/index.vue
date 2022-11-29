@@ -34,7 +34,7 @@
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <nuxt-link
-                  :to="{ name: 'system-user-create' }"
+                  :to="{ name: 'erp_whu-system-user-create' }"
                   class="btn btn-info btn-sm"
                   style="padding-top: 8px"
                   title="Tambah"
@@ -76,7 +76,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'system-user-edit-id',
+                  name: 'erp_whu-system-user-edit-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"
@@ -97,7 +97,7 @@
             <template v-slot:cell(role)="row">
               <b-button
                 :to="{
-                  name: 'system-user_has_role_2-id',
+                  name: 'erp_whu-system-user_has_role_2-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"

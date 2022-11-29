@@ -249,7 +249,7 @@ export default {
 
     back() {
       this.$router.push({
-        name: 'admin-employee_afdeling-id',
+        name: 'erp_whu-admin-employee_afdeling-id',
         params: { id: this.field.employee_id, r: 1 },
       })
     },

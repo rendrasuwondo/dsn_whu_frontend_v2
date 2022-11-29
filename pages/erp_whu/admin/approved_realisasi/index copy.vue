@@ -104,7 +104,7 @@
               <div class="input-group-prepend">
                 <!-- <nuxt-link
                   :to="{
-                    name: 'admin-activity_actual-create',
+                    name: 'erp_whu-admin-activity_actual-create',
                     query: {
                       activitied_at_prepend:
                         this.$route.query.activitied_at_prepend,
@@ -171,7 +171,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-activity_actual-edit-id',
+                  name: 'erp_whu-admin-activity_actual-edit-id',
                   params: { id: row.item.id },
                   query: {
                     activitied_at_prepend: param_activitied_at_prepend,

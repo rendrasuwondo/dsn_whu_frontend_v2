@@ -222,7 +222,7 @@ export default {
   methods: {
     back() {
       this.$router.push({
-        name: 'system-menu',
+        name: 'erp_whu-system-menu',
         params: { id: this.$route.params.id, r: 1 },
       })
     },

@@ -206,7 +206,7 @@ export default {
 
     back() {
       this.$router.push({
-        name: 'system-user_has_role_2-id',
+        name: 'erp_whu-system-user_has_role_2-id',
         params: { id: this.$route.params.id, r: 1 },
       })
     },

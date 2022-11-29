@@ -53,7 +53,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-activity-edit-id',
+                  name: 'erp_whu-admin-activity-edit-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"

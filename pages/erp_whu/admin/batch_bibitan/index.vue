@@ -45,7 +45,7 @@
                 <div v-if="this.$auth.user.employee.department_id === 375">
                   <nuxt-link
                     :to="{
-                      name: 'admin-batch_bibitan-create',
+                      name: 'erp_whu-admin-batch_bibitan-create',
                       query: {
                         company_id: this.$auth.user.employee.company_id,
                       },
@@ -99,7 +99,7 @@
               <b-button
                 :disabled="vdepartment_id != 375"
                 :to="{
-                  name: 'admin-batch_bibitan-edit-id',
+                  name: 'erp_whu-admin-batch_bibitan-edit-id',
                   params: { id: row.item.id },
                   query: { company_id: row.item.company_id },
                 }"

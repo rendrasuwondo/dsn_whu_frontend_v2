@@ -119,7 +119,7 @@ export default {
 
           //redirect
           this.$router.push({
-            name: 'arp_whu-admin-dashboard',
+            name: 'erp_whu-admin-dashboard',
           })
         })
 

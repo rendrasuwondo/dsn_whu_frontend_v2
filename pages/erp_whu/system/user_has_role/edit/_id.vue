@@ -232,7 +232,7 @@ export default {
 
     back() {
       this.$router.push({
-        name: 'system-user_has_role-id',
+        name: 'erp_whu-system-user_has_role-id',
         params: { id: this.field.role_id, r: 1 },
       })
     },

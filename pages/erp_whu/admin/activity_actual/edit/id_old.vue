@@ -77,7 +77,7 @@
               </div> -->
             </div>
 
-             <div class="form-group">
+            <div class="form-group">
               <label>Afdeling</label>
               <input
                 type="text"
@@ -346,7 +346,6 @@ export default {
     this.$axios
       .get(`/api/admin/activity_actual/${this.$route.params.id}`)
       .then((response) => {
-     
         this.id = response.data.data.id.split('_')
         console.log(this.id[0])
 
@@ -385,9 +384,11 @@ export default {
             this.field.activity_id = response.data.data
           })
 
-          //SKU
+        //SKU
         this.$axios
-          .get(`/api/admin/lov_labour/${this.company_code}/${this.department_code}?id=${this.id[5]}`)
+          .get(
+            `/api/admin/lov_labour/${this.company_code}/${this.department_code}?id=${this.id[5]}`
+          )
           .then((response) => {
             this.field.labour = response.data.data
           })
@@ -397,7 +398,7 @@ export default {
   methods: {
     back() {
       this.$router.push({
-        name: 'admin-activity_actual',
+        name: 'erp_whu-admin-activity_actual',
         params: { id: this.$route.params.id, r: 1 },
         query: {
           activitied_at_prepend: this.$route.query.activitied_at_prepend,
@@ -446,7 +447,7 @@ export default {
           })
           //redirect ke route "post"
           this.$router.push({
-            name: 'admin-activity_actual',
+            name: 'erp_whu-admin-activity_actual',
           })
         })
         .catch((error) => {

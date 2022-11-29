@@ -213,13 +213,13 @@ export default {
         this.field.description = response.data.data.description
         this.field.sbu = response.data.data.sbu
       })
-      this.$refs.code.focus()
+    this.$refs.code.focus()
   },
 
   methods: {
     back() {
       this.$router.push({
-        name: 'admin-company',
+        name: 'erp_whu-admin-company',
         params: { id: this.$route.params.id, r: 1 },
       })
     },

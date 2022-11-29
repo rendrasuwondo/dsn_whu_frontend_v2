@@ -269,7 +269,7 @@ export default {
 
     back() {
       this.$router.push({
-        name: 'system-sub_menu-id',
+        name: 'erp_whu-system-sub_menu-id',
         params: { id: this.field.parent_id, r: 1 },
       })
     },

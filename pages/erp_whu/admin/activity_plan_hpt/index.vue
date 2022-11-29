@@ -89,7 +89,7 @@
               <div class="input-group-prepend">
                 <b-button-group>
                   <nuxt-link
-                    :to="{ name: 'admin-activity_plan_hpt-create' }"
+                    :to="{ name: 'erp_whu-admin-activity_plan_hpt-create' }"
                     class="btn btn-info btn-sm"
                     style="padding-top: 8px"
                     title="Tambah"
@@ -135,7 +135,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-activity_plan_hpt-edit-id',
+                  name: 'erp_whu-admin-activity_plan_hpt-edit-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"
@@ -156,7 +156,7 @@
             <template v-slot:cell(detail)="row">
               <b-button
                 :to="{
-                  name: 'admin-activity_plan_hpt_detail-id',
+                  name: 'erp_whu-admin-activity_plan_hpt_detail-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"

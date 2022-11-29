@@ -11,7 +11,10 @@
             <table>
               <tr>
                 <td>
-                  <nuxt-link :to="{ name: 'admin-employee' }" class="nav-link">
+                  <nuxt-link
+                    :to="{ name: 'erp_whu-admin-employee' }"
+                    class="nav-link"
+                  >
                     <i class="nav-icon fas fa-id-badge"></i>
                     Employee
                   </nuxt-link>
@@ -38,7 +41,7 @@
               <div class="input-group-prepend">
                 <nuxt-link
                   :to="{
-                    name: 'admin-employee_afdeling-create-id',
+                    name: 'erp_whu-admin-employee_afdeling-create-id',
                     params: { id: employee_id, r: 1 },
                   }"
                   class="btn btn-info btn-sm"
@@ -88,7 +91,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-employee_afdeling-edit-id',
+                  name: 'erp_whu-admin-employee_afdeling-edit-id',
                   params: { id: row.item.id, r: 1 },
                 }"
                 variant="link"
@@ -109,7 +112,7 @@
             <template v-slot:cell(detail)="row">
               <b-button
                 :to="{
-                  name: 'admin-employee_afdeling',
+                  name: 'erp_whu-admin-employee_afdeling',
                   params: { id: row.item.id },
                 }"
                 variant=""

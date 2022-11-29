@@ -397,7 +397,7 @@ export default {
     },
     back() {
       this.$router.push({
-        name: 'admin-employee',
+        name: 'erp_whu-admin-employee',
         params: { id: this.$route.params.id, r: 1 },
         query: {
           q: this.$route.query.q,
@@ -448,7 +448,7 @@ export default {
           })
           //redirect ke route "post"
           this.$router.push({
-            name: 'admin-employee',
+            name: 'erp_whu-admin-employee',
             query: {
               q: this.$route.query.q,
             },

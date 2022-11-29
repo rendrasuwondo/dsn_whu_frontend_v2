@@ -427,7 +427,7 @@ export default {
 
     back() {
       this.$router.push({
-        name: 'admin-upload_file',
+        name: 'erp_whu-admin-upload_file',
       })
     },
 

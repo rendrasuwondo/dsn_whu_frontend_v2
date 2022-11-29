@@ -10,16 +10,14 @@
           <h3 class="card-title">
             <i class="nav-icon fas fa-folder"></i> CATEGORIES
           </h3>
-          <div class="card-tools">
-            
-          </div>
+          <div class="card-tools"></div>
         </div>
         <div class="card-body">
           <div class="form-group">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <nuxt-link
-                  :to="{ name: 'admin-category-create' }"
+                  :to="{ name: 'erp_whu-admin-category-create' }"
                   class="btn btn-info btn-sm"
                   style="padding-top: 8px"
                 >
@@ -57,7 +55,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-category-edit-id',
+                  name: 'erp_whu-admin-category-edit-id',
                   params: { id: row.item.id },
                 }"
                 variant="warning"
@@ -97,8 +95,7 @@ export default {
   //meta
   head() {
     return {
-      title:
-        'Categories - DSN ERP WHU',
+      title: 'Categories - DSN ERP WHU',
     }
   },
 

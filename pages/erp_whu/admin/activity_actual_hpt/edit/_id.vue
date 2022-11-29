@@ -373,7 +373,7 @@ export default {
   methods: {
     back() {
       this.$router.push({
-        name: 'admin-activity_actual_hpt',
+        name: 'erp_whu-admin-activity_actual_hpt',
         params: { id: this.$route.params.id, r: 1 },
         query: {
           activitied_at_prepend: this.$route.query.activitied_at_prepend,

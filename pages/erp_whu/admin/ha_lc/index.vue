@@ -44,7 +44,7 @@
               <div class="input-group-prepend">
                 <div v-if="this.$auth.user.employee.department_id === 375">
                   <nuxt-link
-                    :to="{ name: 'admin-ha_lc-create' }"
+                    :to="{ name: 'erp_whu-admin-ha_lc-create' }"
                     class="btn btn-info btn-sm"
                     style="
                       padding-top: 8px;
@@ -94,7 +94,7 @@
               <b-button
                 :disabled="vdepartment_id != 375"
                 :to="{
-                  name: 'admin-ha_lc-edit-id',
+                  name: 'erp_whu-admin-ha_lc-edit-id',
                   params: { id: row.item.id },
                 }"
                 variant="link"

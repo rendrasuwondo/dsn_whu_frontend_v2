@@ -12,7 +12,7 @@
               <tr>
                 <td>
                   <nuxt-link
-                    :to="{ name: 'admin-activity_plan' }"
+                    :to="{ name: 'erp_whu-admin-activity_plan' }"
                     class="nav-link"
                   >
                     <i class="nav-icon fas fa-book-open"></i>
@@ -42,7 +42,7 @@
               <div class="input-group-prepend">
                 <nuxt-link
                   :to="{
-                    name: 'admin-activity_plan_detail-create-id',
+                    name: 'erp_whu-admin-activity_plan_detail-create-id',
                     params: { id: activity_plan_id, r: 1 },
                   }"
                   class="btn btn-info btn-sm"
@@ -84,7 +84,7 @@
             <template v-slot:cell(actions)="row">
               <b-button
                 :to="{
-                  name: 'admin-activity_plan_detail-edit-id',
+                  name: 'erp_whu-admin-activity_plan_detail-edit-id',
                   params: { id: row.item.id, r: 1 },
                 }"
                 variant="link"
@@ -105,7 +105,7 @@
             <template v-slot:cell(detail)="row">
               <b-button
                 :to="{
-                  name: 'admin-activity_plan_detail',
+                  name: 'erp_whu-admin-activity_plan_detail',
                   params: { id: row.item.id },
                 }"
                 variant=""

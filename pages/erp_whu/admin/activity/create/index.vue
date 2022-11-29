@@ -259,7 +259,7 @@ export default {
   methods: {
     back() {
       this.$router.push({
-        name: 'admin-activity',
+        name: 'erp_whu-admin-activity',
         params: { id: this.$route.params.id, r: 1 },
       })
     },
@@ -311,7 +311,7 @@ export default {
 
           //redirect, if success store data
           this.$router.push({
-            name: 'admin-activity',
+            name: 'erp_whu-admin-activity',
           })
         })
         .catch((error) => {
